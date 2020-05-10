@@ -12,6 +12,7 @@
 # coordinates contains no duplicate point.
 
 
+#0 division
 class Solution:
     def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
         if len(coordinates) == 2:
