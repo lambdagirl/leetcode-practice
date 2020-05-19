@@ -28,7 +28,7 @@ class Solution:
                 return 0
             L = height(node.left)
             R = height(node.right)
-            self.ans = max(self.ans, L, R)
-            return max(L, R)
+            self.ans = max(self.ans, L + R)
+            return max(L, R) +1
         height(root)
         return self.ans
