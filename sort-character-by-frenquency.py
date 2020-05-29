@@ -15,18 +15,27 @@
 import collections
 
 
-class Solution:
-    def frequencySort(self, s: str) -> str:
-        dic = {}
-        for letter in s:
-            if letter in dic:
-                dic[letter] += 1
-            else:
-                dic[letter] = 1
-        res = ""
-        for k, v in (sorted(dic.items(), key=lambda kv: kv[1], reverse=True)):
-            res += k*v
-        return res
+def frequencySort(s):
+    res = ""
+    dic = collections.Counter(s)
+    for k, v in sorted(dic.items(), key=lambda kv: kv[1], reverse=True):
+        res += k*v
+    return res
+
+
+def frequencySort_oN(s):
+    counts = collections.Counter(s)
+    max_freq = max(counts.values())
+    buckets = [[] for _ in range(max_freq + 1)]
+    for k, v in counts.items():
+        buckets[v].append(k)
+    res_list = []
+
+    for i in range(len(buckets) - 1, 0, -1):
+        for letter in buckets[i]:
+            res_list.append(i*letter)
+    return ''.join(res_list)
 
 
 print(frequencySort("tree"))
+print(frequencySort_oN("tree"))
