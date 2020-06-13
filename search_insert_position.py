@@ -36,3 +36,6 @@ class Solution:
             else:
                 r = mid - 1
         return l
+
+# if the target value is found
+# if the target value is not found
