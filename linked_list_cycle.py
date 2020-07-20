@@ -36,8 +36,8 @@ class Solution1:
             head = head.next
         return False
 
-
-class Solution2:
+# space O(1)
+class Solution2: 
     def hasCycle(self, head: ListNode) -> bool:
 
         if not head or not head.next:
