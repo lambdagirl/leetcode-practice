@@ -34,7 +34,7 @@ def pow(x, n):
     else:
         return pow(x*x, (n-1)/2)*x
 
-
+#Brute Force
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         ans = 1
