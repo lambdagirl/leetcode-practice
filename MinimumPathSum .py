@@ -14,7 +14,7 @@
 # Output: 7
 # Explanation: Because the path 1→3→1→1→1 minimizes the sum.
 
-#2^(m+n) Time complexity
+#2(mn)
 def minPathSum(grid):
     #boundry case
     def caculate_grid(grid, row, col):
