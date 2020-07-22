@@ -35,3 +35,12 @@ def reverseString(s):
 s = ["H", "a", "n", "n", "a", "h"]
 reverseString(s)
 print(s)
+
+def reverse(strs):
+    left_idx = 0
+    right_idx = len(strs)-1
+
+    while left_idx < right_idx:
+        strs[left_idx], strs[right_idx] = strs[right_idx], strs[left_idx]
+        left_idx +=1
+        right_idx -=1
