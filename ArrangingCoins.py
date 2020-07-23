@@ -63,7 +63,7 @@ def arrangeCoins(n):
     l = 0
     r = n 
     while l <= r:
-        x = (r+1)//2
+        x = (r+l)//2
         curr = x * (x+1)//2
         if curr == n:
             return x
