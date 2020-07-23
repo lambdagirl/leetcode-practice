@@ -14,7 +14,7 @@ def get_products_of_all_ints_except_at_index(nums):
     product_before_index = product_after_index = 1
     ans =[]
     for i,num in enumerate(nums):
-        product_before_index = 
+        product_before_index = nums
         product_after_index = 
         ans.append(product_before_index*product_after_index)
 

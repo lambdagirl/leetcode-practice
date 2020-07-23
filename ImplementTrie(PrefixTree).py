@@ -1,13 +1,9 @@
-from collections import defaultdict
-class TireNode:
-    def __init__(self):
-        self.children = {}
-        self.endOfWord = False
+
 class Tire:
     def __init__(self):
-        self.rootNode = TireNode
+        self.root = {}
     def insert(self, word):
-        for letter in word:
-            children.append(letter)
+        for l in word:
+            if l not in self.
         self.endOfWord = True
     

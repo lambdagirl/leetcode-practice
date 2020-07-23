@@ -28,7 +28,6 @@ class Solution:
 
 #Solution2 log(N)
 #two pointers
-
 def reverseVowels(s):
     vows = 'aeiouAEIOU'
     l, r = 0, len(s) - 1
