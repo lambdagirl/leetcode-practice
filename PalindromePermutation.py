@@ -18,6 +18,7 @@ civic
 
 * track if a character appears odd number 
 
+*We don’t really care how many times a character appears in the string, we just need to know whether the character appears an even or odd number of times.
 
 
 '''
