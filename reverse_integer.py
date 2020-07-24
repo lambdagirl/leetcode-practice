@@ -43,8 +43,7 @@ def reverse(num):
         l += 1
         r -= 1
     res = int(''.join(arr))
-    if res <= -pow(2, 31) or res > pow(2, 31)-1:
-        return 0
+    return 0 if res <= -pow(2, 31) or res > pow(2, 31)-1
     return res
 
 
@@ -65,6 +64,9 @@ def reverse2(num):
     while True:
         res = res * 10 + num%10
         num = num // 10
-    return res * sign
+    return 0 if res > pow(2, 31) else res * symbol
 
 
+print(reverse2(123))
+print(reverse2(-123))
+print(reverse2(10200))
