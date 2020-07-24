@@ -51,3 +51,20 @@ def reverse(num):
 print(reverse(123))
 print(reverse(-123))
 print(reverse(10200))
+
+
+##########
+def reverse2(num):
+    sign = 1
+    res = 0
+
+    if num < 0:
+        sign = 0
+        num = -num 
+
+    while True:
+        res = res * 10 + num%10
+        num = num // 10
+    return res * sign
+
+
