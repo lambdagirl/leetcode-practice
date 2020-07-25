@@ -19,7 +19,7 @@
 # nums1.length == m + n
 # nums2.length == n
 
-# Approach 3: Two pointers / Start from the end
+# Approach : Two pointers / Start from the end
 # O(M+N)
 def merge(nums1,nums2,m,n):
     while m > 0 and n > 0:
@@ -31,3 +31,8 @@ def merge(nums1,nums2,m,n):
             n -= 1
         #case nums2 still have n element left
         nums1[:n] = nums2[:n]
+
+#Approach: Merge and Sort
+def merge_and_sort(nums1,nums2,m,n):
+    nums1 = nums1[:m] + nums2 
+    sorted(nums1)
