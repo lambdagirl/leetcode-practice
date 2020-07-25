@@ -30,9 +30,17 @@ def merge(nums1,nums2,m,n):
             nums1[m+n-1] = nums2[n-1]
             n -= 1
         #case nums2 still have n element left
-        nums1[:n] = nums2[:n]
+    nums1[:n] = nums2[:n]
+    return nums1
 
 #Approach: Merge and Sort
 def merge_and_sort(nums1,nums2,m,n):
     nums1 = nums1[:m] + nums2 
-    sorted(nums1)
+    return sorted(nums1)
+
+
+nums1 = [1, 2, 3, 0, 0, 0]
+m = 3
+nums2 = [2, 5, 6]
+n = 3
+print(merge(nums1, nums2, m, n))
