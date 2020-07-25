@@ -48,7 +48,7 @@
 # The given board size is always 9x9.
 
 def is_unit_valid(unit):
-    value = [ i for i in unit if i != '.']
+    values = [ i for i in unit if i != '.']
     return len(set(values)) == len(values)
 
 def is_row_valid(board):

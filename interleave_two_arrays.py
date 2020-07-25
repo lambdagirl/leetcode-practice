@@ -44,7 +44,16 @@ print(interleave3(['a', 'c', 's', 'z','s'], ['a', 'b', 'x']))
 
 
 #different length n array
+'''
+[['a','b','c'],
+['d','e','f','g','h'],
+['i','j','k'],
+['l','m','n','o']]
 
+=>
+['a','d','i','l','b','e','j','m','c','f','k','n','g','o','h']
+
+'''
 def interleaveArrays(lists):
     res = []
     i = 0
@@ -52,7 +61,7 @@ def interleaveArrays(lists):
     while not done:
         done = True
         for l in lists:
-            if len(l) > i:
+            if i < len(l):
                 res.append(l[i])
                 done = False
         i +=1
