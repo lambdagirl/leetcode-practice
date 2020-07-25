@@ -55,7 +55,7 @@ def isBalanced(root):
         if not node.left and not node.right:
             # we only care if it's a new depth
             if depth not in depths:
-                depth.append(depth)
+                depths.append(depth)
                 # Two ways we might now have an unbalanced tree:
                 #   1) more than 2 different leaf depths
                 #   2) 2 leaf depths that are more than 1 apart
