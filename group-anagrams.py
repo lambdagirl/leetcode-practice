@@ -1,13 +1,5 @@
 # 49. Group Anagrams
-# Medium
 
-# 3604
-
-# 186
-
-# Add to List
-
-# Share
 # Given an array of strings, group anagrams together.
 
 # Example:

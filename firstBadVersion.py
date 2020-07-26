@@ -19,7 +19,7 @@ def firstBadVersion(n):
     l = 1
     r = n
     while l < r:
-        mid = (l + r) // 2
+        mid = l + (r-l) // 2
         if isBadVersion(mid):
             #if True, mid could be the target,so we include mid.
             r = mid
