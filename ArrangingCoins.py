@@ -1,7 +1,6 @@
 """
 n is always non negative (n >= 0)
 0 <= n <= 2^31 -1
- 
 n = 10 
 Should return 4
 
@@ -44,13 +43,13 @@ c = 3
 ****
 *****
 
-[1,2,3,4,5]
+l = [1,2,3,4,5]
+sum(l) = (l[0]+l[-1])*len(l)//2 < n
 
 
 """
 
-class Solution:
-    def arrangeCoins(self, n: int) -> int:
+def arrangeCoins(n):
         row = 0
         counter = 1
         while n >= counter:
@@ -59,7 +58,7 @@ class Solution:
             counter += 1
         return row
 
-def arrangeCoins(n):
+def arrangeCoins1(n):
     l = 0
     r = n 
     while l <= r:
