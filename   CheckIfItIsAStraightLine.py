@@ -29,3 +29,24 @@ class Solution:
                 if coordinates[i][0] * a + b != coordinates[i][1]:
                     return False
         return True
+
+
+def checkStraightLine(coordinates):
+    if len(coordinates) == 2:
+        return True
+    
+    x0,y0 = coordinates[0]
+    x1,y1 = coordinates[1]
+    
+    if x0 == x1:
+        for i in range(2,len(coordinates)):
+            if coordinates[i][0]!= coordinates[0][0]:
+                return False 
+    else:
+        a = (y1-y0) /(x1-x0)
+        b = y0 - x0 * a 
+
+        for i in range(2, len(coordinates)):
+            if coordinates[i][0] * a + b != coordinates[i][1]:
+                return False 
+    return True
