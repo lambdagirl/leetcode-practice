@@ -15,8 +15,7 @@ def find_rotation_point(words):
     l = 0
     r = len(words)-1
     while l < r:
-        print(l, r)
-        mid = (r+l)//2 
+        mid = l + (r-l)//2 
         if words[mid][0] > words[l][0]:
             l = mid 
         else:
