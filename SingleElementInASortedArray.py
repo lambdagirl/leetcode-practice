@@ -1,4 +1,7 @@
-# You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once. Find this single element that appears only once.
+# A sorted array consisting of only integers 
+# where every element appears exactly twice,
+# except for one element which appears exactly once. 
+# Find this single element that appears only once.
 
 
 # Example 1:
@@ -15,16 +18,14 @@
 # Note: Your solution should run in O(log n) time and O(1) space.
 
 # Approach 1: Brute Force; O(N); spaceO(1)
-def singleNonDuplicate(self, nums: List[int]) -> int:
-    for i in range(len(nums)-2, 2):
+def singleNonDuplicate(nums):
+    for i in range(0, len(nums)-2, 2):
         if nums[i] != nums[i+1]:
             return nums[i]
     return nums[-1]
 
 # Approach 2: Binary Search; O(logN); spaceO(1)
-
-
-def singleNonDuplicate(self, nums: List[int]) -> int:
+def singleNonDuplicate1(nums):
     l, r = 0, len(nums)-1
     while l < r:
         mid = (l + r) // 2
@@ -41,3 +42,19 @@ def singleNonDuplicate(self, nums: List[int]) -> int:
         else:
             return nums[mid]
     return nums[l]
+
+#3 Binary Search on even index:
+
+def singleNonDuplicate2(nums):
+    l = 0
+    r = len(nums) -1
+
+    while l < r:
+        mid = l + (r-l) //2
+        if mid % 2 == 1:
+            mid -=1
+        if nums[mid] == nums[mid + 1]:
+            l = mid + 2
+        else:
+            r = mid 
+    return mid[l]
