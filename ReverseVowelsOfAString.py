@@ -37,7 +37,7 @@ def reverseVowels(s):
             l += 1
             continue
         if s[r] not in vows:
-            i -=1
+            r -=1
             continue
 
         s[l], s[r] = s[r], s[l]
@@ -46,3 +46,4 @@ def reverseVowels(s):
     return ''.join(s)
 
 
+print(reverseVowels('leetcode'))
