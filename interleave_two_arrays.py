@@ -60,7 +60,7 @@ def interleaveArrays(lists):
     done = False
     while not done:
         done = True
-        for l in lists:
+        for l in lists: 
             if i < len(l):
                 res.append(l[i])
                 done = False

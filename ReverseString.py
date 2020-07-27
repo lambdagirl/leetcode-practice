@@ -36,6 +36,7 @@ s = ["H", "a", "n", "n", "a", "h"]
 reverseString(s)
 print(s)
 
+#O(logN) two pointers
 def reverse(strs):
     left_idx = 0
     right_idx = len(strs)-1
