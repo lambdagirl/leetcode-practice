@@ -26,7 +26,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
-
+#recursive top down O(log(N))
 def searchBST(root, val):
     if root is None or val == root.val:
         return root
