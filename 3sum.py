@@ -16,7 +16,7 @@
 
 
 def threeSum(nums):
-    nums.sort()  #O(N)
+    nums.sort()  #O(Nlog(N))
     res = []
     for i, num in enumerate(nums):
       # avoid duplicate for the first num in the triplets
